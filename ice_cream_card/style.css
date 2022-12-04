@@ -23,8 +23,19 @@ button {
 }
 
 body {
-    background-color: #FEAFC3;
     margin: 0;
+}
+
+.pink {
+    background-color: #FEAFC3;
+}
+
+.blue {
+    background-color: #69A9FF;
+}
+
+.yellow {
+    background-color: #FCC850;
 }
 
 
