@@ -1,0 +1,566 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x:hidden;
+    background: #FEAFC3;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding-top: 21px;
+}
+
+.header-container {
+    background: #FEAFC3;
+    display: flex;
+    height: calc(80 / 1440 * 100vw);
+    margin: 0;
+    align-items: center;
+
+}
+
+.header-logo {
+    margin-left: calc(30 / 1440 * 100vw);
+    width: 222px;
+    height: 50px;
+}
+
+.header-link {
+    display: flex;
+    gap: 3%;
+    width: 100%;
+    justify-content: end;
+    padding-right: 7%;
+}
+
+.header-link__registration {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(24 / 1440 * 100vw);
+    line-height: calc(29 / 1440 * 100vw);
+    text-decoration: none;
+    padding: calc(5 / 1440 * 100vw);
+
+    background: #FCFCFC;
+    border-radius: 30px;
+    border: 4px solid rgba(254, 175, 195, 0.4);
+    box-shadow: 0px 4px 12px rgb(45 52 64 / 10%);
+
+    color: #787878;
+}
+
+.header-link__entrance {
+    padding-right: calc(20 / 1440 * 100vw);
+    padding-left: calc(20 / 1440 * 100vw);
+    padding-top: calc(4 / 1440 * 100vw);
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(24 / 1440 * 100vw);
+    line-height: calc(29 / 1440 * 100vw);
+    text-decoration: none;
+
+    background: #FCFCFC;
+    border-radius: 30px;
+    border: 4px solid rgba(254, 175, 195, 0.4);
+    box-shadow: 0px 4px 12px rgb(45 52 64 / 10%);
+
+    color: #787878;
+}
+
+.header-link__entrance-active {
+    color: #2D3440;
+    background: #FF4A78;
+}
+
+.header-link__registration-active {
+    color: #2D3440;
+    background: #FF4A78;
+}
+
+/* Container */ 
+
+.container {
+    width: 100vw;
+}
+
+.box {
+    width: calc(600 / 1440 * 100vw);
+    height: calc(875 / 1440 * 100vw);
+
+    margin-top: calc(125 / 1440 * 100vw);
+    margin-left: calc(435 / 1440 * 100vw);
+    margin-bottom: calc(100 / 1440 * 100vw);
+
+    background: #FFFFFF;
+    border-radius: 26px;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
+}
+
+.box__entrance {
+    height: calc(383 / 1440 * 100vw);
+}
+
+.form {
+    position: relative;
+}
+
+.form-title {
+    padding-top: calc(26 / 1440 * 100vw);
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(50 / 1440 * 100vw);
+    line-height: calc(50 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+.form-email {
+    padding-top: calc(17 / 1440 * 100vw);
+}
+
+.form-label__name {
+    display: block;
+    padding-left: calc(33 / 1440 * 100vw);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+.form-input {
+    width: calc(509 / 1440 * 100vw);
+    height: calc(49 / 1440 * 100vw);
+    padding-left: calc(15 / 1440 * 100vw);
+    margin-top: calc(3 / 1440 * 100vw);
+    margin-left: calc(45 / 1440 * 100vw);
+
+    background: #FFFFFF;
+    outline: none;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(28 / 1440 * 100vw);
+    line-height: calc(36 / 1440 * 100vw);
+}
+
+.form-input__email {
+    margin-bottom: calc(17 / 1440 * 100vw);
+}
+
+.form-input__password {
+    margin-bottom: calc(17 / 1440 * 100vw);
+}
+
+.form-input::-webkit-input-placeholder {
+    color: #CCCCCC;
+}
+
+.form-input:focus {
+    color: #2D3440;
+}
+
+/* Error */
+
+.error {
+    position: absolute;
+    display: flex;
+    right: 0;
+    margin-top: calc(-17 / 1440 * 100vw);
+    margin-right: calc(46 / 1440 * 100vw);
+    
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #EE2424;
+}
+
+.hide {
+    display: none;
+}
+
+.border-error {
+    border: 2px solid #EE2424;
+}
+
+
+/* Radio */
+
+.form_radio {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(14 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+.form-radio__title {
+    margin-left: calc(45 / 1440 * 100vw);
+    margin-top: calc(11 / 1440 * 100vw);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+.form_radio input[type=radio] {
+	display: none;
+}
+
+.form_radio label {
+	display: inline-block;
+	cursor: pointer;
+
+	position: relative;
+	padding-left: calc(74 / 1440 * 100vw);
+    padding-bottom: calc(6 / 1440 * 100vw);
+    padding-top: calc(6 / 1440 * 100vw);
+	
+	line-height: calc(18 / 1440 * 100vw);
+	user-select: none;
+}
+
+.form-radio__input {
+    margin-left: calc(45 / 1440 * 100vw);
+}
+
+.form_radio label::before {
+	content: "";
+	display: inline-block;
+    width: calc(10 / 1440 * 100vw);
+    height: calc(10 / 1440 * 100vw);
+	position: absolute;
+
+	left: calc(45 / 1440 * 100vw);
+    top: calc(5 / 1440 * 100vw);
+	bottom: calc(6 / 1440 * 100vw);
+
+    border: 2px solid #2D3440;
+    border-radius: 50%;
+    padding: calc(3 / 1440 * 100vw);
+    transition: .2s;
+}
+ 
+.form_radio input[type=radio]:checked + label:before {
+	background: #2D3440;
+    background-clip: content-box;
+}
+
+/* Comment */
+
+.form-comment__about-me {
+    display: block;
+    margin-left: calc(45 / 1440 * 100vw);
+    margin-top: calc(13 / 1440 * 100vw);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(16 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+.form-comment__text {
+    width: calc(510 / 1440 * 100vw);
+    height: calc(246 / 1440 * 100vw);
+    resize: none;
+    margin-left: calc(45 / 1440 * 100vw);
+    margin-top: calc(3 / 1440 * 100vw);
+    outline: none;
+
+    padding-top: calc(7 / 1440 * 100vw);
+    padding-left: calc(20 / 1440 * 100vw);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(28 / 1440 * 100vw);
+    line-height: calc(36 / 1440 * 100vw);
+
+    background: #FFFFFF;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+}
+
+.form-comment__text::-webkit-input-placeholder {
+    color: #CCCCCC;
+}
+
+.form-comment__text:focus {
+    color: #2D3440;
+}
+
+/* Checkbox */
+
+.form-input__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form-input__checkbox + label {
+    position: relative;
+    cursor: pointer;
+}
+
+.form-input__checkbox + label::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    margin-left: calc(45 / 1440 * 100vw);
+    margin-top: calc(5 / 1440 * 100vw);
+
+    width: calc(14 / 1440 * 100vw);
+    height: calc(14 / 1440 * 100vw);
+    padding: calc(2 / 1440 * 100vw);
+
+    background: url(./check-off.svg) no-repeat;
+    transition: .2s;
+}
+
+.form-input__checkbox:checked + label::before {
+    background: url(./check-on.svg) no-repeat;
+    background-clip: content-box;
+    content: '';
+    width: calc(14 / 1440 * 100vw);
+    height: calc(14 / 1440 * 100vw);
+    display: inline-block;
+}
+
+.form-label__text {
+    margin-left: calc(77 / 1440 * 100vw);
+    margin-top: calc(24 / 1440 * 100vw);
+    padding-top: calc(4 / 1440 * 100vw);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(14 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #2D3440;
+}
+
+/* Button */
+
+.form-button {
+    position: relative;
+    top: calc(25 / 1440 * 100vw);
+    padding-left: calc(210 / 1440 * 100vw);
+}
+
+.form-button__submit {
+    width: calc(180 / 1440 * 100vw);
+    height: calc(52 / 1440 * 100vw);
+
+    background: #FF4A78;
+    border: none;
+    cursor: pointer;
+    border-radius: 26px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: calc(24 / 1440 * 100vw);
+    line-height: calc(16 / 1440 * 100vw);
+
+    color: #FFFFFF;
+}
+
+@media (max-width:768px) {
+
+    .header-container {
+        height: calc(80 / 768 * 100vw);
+    }
+
+    .header-front {
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(29 / 768 * 100vw);
+    }
+
+    .header-link {
+        margin-bottom: calc(6 / 768 * 100vw);
+        padding-left: 50%;
+    }
+
+    .header-link__registration {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(34 / 768 * 100vw);
+    }
+
+    .header-link__entrance {
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(19 / 768 * 100vw);
+        padding-top: calc(17 / 1440 * 100vw);
+    }
+
+    /* Box */
+
+    .box {
+        margin: calc(100 / 768 * 100vw) auto calc(100 / 768 * 100vw);
+
+        width: calc(600 / 768 * 100vw);
+        height: calc(875 / 768 * 100vw);
+    }
+
+    .box__entrance {
+        height: calc(383 / 768 * 100vw);
+    }
+
+    .form-title {
+        text-align: center;
+        width: 100%;
+        
+        height: calc(50 / 768 * 100vw);
+
+        font-size: calc(50 / 768 * 100vw);
+        line-height: calc(50 / 768 * 100vw);
+    }
+
+    .form-label__name {
+        margin-top: calc(10 / 768 * 100vw);
+        margin-left: calc(25 / 768 * 100vw);
+
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .form-input {
+        margin-left: calc(45 / 768 * 100vw);
+        margin-top: calc(5 / 768 * 100vw);
+
+        width: calc(509 / 768 * 100vw);
+        height: calc(49 / 768 * 100vw);
+
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+    }
+
+    .form_radio {
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .form-radio__title {
+        margin-top: calc(11 / 768 * 100vw);
+        margin-left: calc(45 / 768 * 100vw);
+
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .form_radio label {
+        padding-left: calc(74 / 768 * 100vw);
+        padding-bottom: calc(10 / 768 * 100vw);
+        padding-top: calc(11 / 768 * 100vw);
+    }
+
+    .form_radio label::before {
+        margin-left: calc(20 / 768 * 100vw);
+        top: calc(5 / 768 * 100vw);
+
+
+        width: calc(10 / 768 * 100vw);
+        height: calc(10 / 768 * 100vw);
+
+        padding: calc(3 / 768 * 100vw);
+    }
+
+    .form-comment__about-me {
+        margin-left: calc(45 / 768 * 100vw);
+        
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+     
+    .form-comment__text {
+        margin-left: calc(45 / 768 * 100vw);
+        margin-top: calc(5 / 768 * 100vw);
+
+        width: calc(510 / 768 * 100vw);
+        height: calc(246 / 768 * 100vw);
+
+        font-size: calc(28 / 768 * 100vw);
+        line-height: calc(36 / 768 * 100vw);
+    }
+
+    .form-input__checkbox + label::before {
+        margin-left: calc(45 / 768 * 100vw);
+        margin-top: calc(10 / 768 * 100vw);
+
+        width: calc(10 / 768 * 100vw);
+        height: calc(10 / 768 * 100vw);
+        padding: calc(3 / 768 * 100vw);
+    }
+
+    .form-label__text {
+        margin-left: calc(77 / 768 * 100vw);
+        padding-top: calc(12 / 768 * 100vw);
+
+        font-size: calc(14 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .form-button {
+        padding-left: calc(210 / 768 * 100vw);
+        margin-top: 3%;
+    }
+
+    .form-button__submit {
+        width: calc(180 / 768 * 100vw);
+        height: calc(52 / 768 * 100vw);
+
+        font-size: calc(24 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+
+    .error {
+        margin-top: calc(-17 / 768 * 100vw);
+        margin-right: calc(46 / 768 * 100vw);
+        
+        font-size: calc(16 / 768 * 100vw);
+        line-height: calc(16 / 768 * 100vw);
+    }
+}
+
+    @media (max-width:420px) {
+
+    .form-checkbox {
+        height: 18px;
+    }
+
+    .form-button {
+        margin-top: 4%;
+    }
+    
+}

@@ -1,0 +1,100 @@
+{
+    "products": [
+      {
+        "image": "1.svg",
+        "name": "Малинка",
+        "price": 310,
+        "article": 111,
+        "available": true,
+        "description": "Сливочное мороженое с малиновым джемом"
+      },
+      {
+        "image": "2.svg",
+        "name": "Фисташка",
+        "price": 340,
+        "article": 112,
+        "available": true,
+        "description": "Фисташковый пломбир с кусочками шоколада"
+      },
+      {
+        "image": "3.svg",
+        "name": "Черника",
+        "price": 330,
+        "article": 113,
+        "available": true,
+        "description": "Крем-брюле с черничным джемом"
+      },
+      {
+        "image": "4.svg",
+        "name": "Бабл-гам",
+        "price": 320,
+        "article": 114,
+        "available": true,
+        "description": "Ванильный пломбир со сладкой посыпкой"
+      },
+      {
+        "image": "5.svg",
+        "name": "Ежевика",
+        "price": 330,
+        "article": 115,
+        "available": true,
+        "description": "Сливочное мороженое с ежевичным джемом"
+      },
+      {
+        "image": "6.svg",
+        "name": "Банан",
+        "price": 340,
+        "article": 116,
+        "available": true,
+        "description": "Сливочный пломбир с банановым вкусом"
+      },
+      {
+        "image": "7.svg",
+        "name": "Шоколадка",
+        "price": 270,
+        "article": 117,
+        "available": true,
+        "description": "Классический шоколадный пломбир"
+      },
+      {
+        "image": "8.svg",
+        "name": "Клубничка",
+        "price": 300,
+        "article": 118,
+        "available": true,
+        "description": "Сливочный пломбир с клубничным вкусом"
+      },
+      {
+        "image": "9.svg",
+        "name": "Лимон",
+        "price": 310,
+        "article": 119,
+        "available": true,
+        "description": "Освежающий лимонный сорбет"
+      },
+      {
+        "image": "10.svg",
+        "name": "Ментол",
+        "price": 320,
+        "article": 121,
+        "available": true,
+        "description": "Сливочный пломбир с ментоловым сиропом"
+      },
+      {
+        "image": "11.svg",
+        "name": "Орешек",
+        "price": 360,
+        "article": 122,
+        "available": true,
+        "description": "Фисташковый пломбир с шоколадным сиропом"
+      },
+      {
+        "image": "12.svg",
+        "name": "Крем-брюле",
+        "price": 280,
+        "article": 123,
+        "available": true,
+        "description": "Классическое крем-брюле"
+      }
+    ]
+  }

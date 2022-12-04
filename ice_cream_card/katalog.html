@@ -11,8 +11,9 @@
 
     <header class="header">
         <div class="header-inner">
-            <img class="header-inner__logo" src="images/header/logo.svg" alt="">
-
+            <a href="./index.html">
+                <img class="header-inner__logo" src="images/header/logo.svg" alt="">
+            </a>
             <nav class="header-nav">
                 <button id="header-nav__active" class="header-nav__link">Каталог</button>
                 <a class="header-nav__link" href="#">Доставка и оплата</a>
@@ -22,187 +23,106 @@
             <div class="header-authorization">
                 <div class="header-authorization__phone">+7 800 555-86-28</div>
                 <button class="header-authorization__search"></button>
-                <button class="header-authorization__entrance"></button>
-                <button class="header-authorization__basket"></button>
+                <a class="header-authorization__entrance" href="auth/index_entrance.html"></a>
+                <button class="header-authorization__basketButton"></button>
             </div> 
+
+            <button class="burger" type="button" id="navToggle">
+                <span class="burger__item">Menu</span>
+            </button>
+
+            <!-- <div class="header-authorization__basket">
+                <div class="header-authorization__basket__background"></div>
+            </div> -->
+            
         </div> <!--header-inner-->
     </header>
+
+    <div class="filter-container">
+        
+        <form class="filter">
+            <div class="filter-sorting">
+                <div class="filter-title">Сортировка:</div>
+                <div class="filter-block">
+                    <select class="filter-block__select">
+                        <option selected>по популярности</option>
+                        <option>сначала недорогие</option>
+                        <option>сначала дорогие</option>
+                        <option>по жирности</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-fat_content">
+                <div class="filter-title">Жирность:</div>
+                    <div class="filter-block filter-block__opacity">
+
+                        <div class="filter-block__inputLabel">
+                            <input class="filter-block__input" type="radio" name="fat_content" value="0" id="fat_content-0">
+                            <label class="filter-block__label" for="fat_content-0">0%</label>
+                        </div>
+
+                        <div class="filter-block__inputLabel">
+                            <input class="filter-block__input" type="radio" name="fat_content" value="10" id="fat_content-10" checked>
+                            <label class="filter-block__label" for="fat_content-10">до 10%</label>
+                        </div>
+
+                        <div class="filter-block__inputLabel">
+                            <input class="filter-block__input" type="radio" name="fat_content" value="30" id="fat_content-30">
+                            <label class="filter-block__label" for="fat_content-30">до 30%</label>
+                        </div>
+                         
+                        <div class="filter-block__inputLabel">
+                            <input class="filter-block__input" type="radio" name="fat_content" value="31" id="fat_content-31">
+                            <label class="filter-block__label" for="fat_content-31">выше 30%</label>
+                        </div>
+
+                    </div>
+            </div>
+
+            <div class="filter-fillers">
+                <div class="filter-title">Наполнители:</div>
+                    <div class="filter-block filter-block__opacity">
+                        <div class="filter-block__fillers-form">
+
+                            <div class="filter-block__inputLabel">
+                                <input class="filter-block__input" type="checkbox" name="chocolate" id="filler-chocolate">
+                                <label for="filler-chocolate">шоколадные</label>
+                            </div>
+
+                            <div class="filter-block__inputLabel">
+                                <input class="filter-block__input" type="checkbox" name="sugar" id="filler-sugar">
+                                <label for="filler-sugar">сахарные присыпки</label>
+                            </div>
+
+                            <div class="filter-block__inputLabel">
+                                <input class="filter-block__input" type="checkbox" name="fruit" id="filler-fruit">
+                                <label for="filler-fruit">фрукты</label>
+                            </div>
+
+                            <div class="filter-block__inputLabel">
+                                <input class="filter-block__input" type="checkbox" name="syrup" id="filler-syrup">
+                                <label for="filler-syrup">сиропы</label>
+                            </div>
+
+                            <div class="filter-block__inputLabel">
+                                <input class="filter-block__input" type="checkbox" name="jam" id="filler-jam">
+                                <label for="filler-jam">джемы</label>
+                            </div>
+                        </div>
+
+                    </div>
+            </div>
+
+            <div class="filter-container-btn">
+                <button class="filter-btn" type="submit">Применить</button>
+            </div>
+        </form>
+    </div>
     
-    <div class="card-container">
+    <div class="card-container" data-role="submissive">
 
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream1.svg" alt="">
-            </div>
-            <div class="card-item__title">Малинка</div>
-            <div class="card-item__text">Сливочное мороженое с малиновым джемом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">310 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream2.svg" alt="">
-            </div>
-            <div class="card-item__title">Фисташка</div>
-            <div class="card-item__text">Фисташковый пломбир с кусочками шоколада</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">340 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream3.svg" alt="">
-            </div>
-            <div class="card-item__title">Черника</div>
-            <div class="card-item__text">Крем-брюле с черничным джемом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">330 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream4.svg" alt="">
-            </div>
-            <div class="card-item__title">Бабл-гам</div>
-            <div class="card-item__text">Ванильный пломбир <br> со сладкой посыпкой</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">320 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream5.svg" alt="">
-            </div>
-            <div class="card-item__title">Ежевика</div>
-            <div class="card-item__text">Сливочное мороженое с ежевичным джемом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">330 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream6.svg" alt="">
-            </div>
-            <div class="card-item__title">Банан</div>
-            <div class="card-item__text">Сливочный пломбир <br> с банановым вкусом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">340 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream7.svg" alt="">
-            </div>
-            <div class="card-item__title">Шоколадка</div>
-            <div class="card-item__text">Классический шоколадный пломбир</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">270 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream8.svg" alt="">
-            </div>
-            <div class="card-item__title">Клубничка</div>
-            <div class="card-item__text">Сливочный пломбир <br> с клубничным вкусом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">300 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream9.svg" alt="">
-            </div>
-            <div class="card-item__title">Лимон</div>
-            <div class="card-item__text">Освежающий лимонный сорбет</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">310 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream10.svg" alt="">
-            </div>
-            <div class="card-item__title">Ментол</div>
-            <div class="card-item__text">Сливочный пломбир <br> с ментоловым сиропом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">320 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream11.svg" alt="">
-            </div>
-            <div class="card-item__title">Орешек</div>
-            <div class="card-item__text">Фисташковый пломбир с шоколадным сиропом</div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">360 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="card-item">
-            <div class="card-item__img">
-                <img src="images/main/card/ice_cream12.svg" alt="">
-            </div>
-            <div class="card-item__title">Крем-брюле</div>
-            <div class="card-item__text">Классическое крем-брюле </div>
-            <div class="card-item__price_block">
-                <span class="card-item__price">280 ₽/кг</span>
-                <button class="card-item__btn">
-                    <img src="images/main/card/icon.svg" alt="">
-                </button>
-            </div>
-        </div>
-
-        <div class="pagination">
-            <button class="pagination_btn">Показать ещё</button>
-        </div>
-
-        <hr class="line">
+        Loading...
 
     </div> <!--Container-->
 
@@ -242,7 +162,7 @@
             </div>
 
         </div> <!--social-->
-
+        <script src="./script.js"></script>
     </footer> 
 
 </body>

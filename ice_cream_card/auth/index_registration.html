@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>Attestation 1</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html">
+                <img class="header-logo" src="../images/header/logo.svg" alt="">
+            </a>
+            <div class="header-link">
+                <a class="header-link__registration header-link__registration-active" href="index_registration.html">
+                    Регистрация</a>
+                <a class="header-link__entrance" href="index_entrance.html">
+                    Вход</a>
+            </div>
+    
+        </div> <!--Header-container-->
+    </header> <!--Header-->
+    
+    <div class="container">
+        <div class="box">
+            
+            <form class="form" action="#">
+        
+                <div class="form-title">Регистрация</div>
+
+            <!--Email/Password-->   
+                <div class="form-email">
+                    <label class="form-label__name" for="email">* Email</label>
+                    <label class="form-label__error form-label__error___incorrectEmail error hide" for="email">Email введён некорректно</label>
+                    <label class="form-label__error form-label__error___emptyEmail error hide" for="email">Поле обязательно для заполнения</label>
+                    <input class="form-input form-input__email" type="email" name="email" id="email" placeholder="Введите email">
+                </div>
+        
+                <div class="form-password">
+                    <label class="form-label__name" for="password">* Пароль</label>
+                    <label class="form-password__error form-label__error___emptyPass error hide" for="password">Поле обязательно для заполнения</label>
+                    <label class="form-password__error form-label__error___lengthPass error hide" for="password">Пароль должен содержать не менее 8 символов</label>
+                    <input class="form-input form-input__password" type="password" name="password" id="password" placeholder="Введите пароль">
+                </div>
+
+                <div class="form-password-confirmation">
+                    <label class="form-label__name" for="password">* Подтверждение пароля</label>
+                    <label class="form-password-confirmation__error form-label__error___emptyPassConfirm error hide" for="password">Пароли не совпадают</label>
+                    <input class="form-input form-input__password-confirmation" type="password" name="password-confirmation" id="password-confirmation" placeholder="Подтвердите пароль">
+                </div>
+
+            <!--Radio-->
+            <div class="form_radio">
+                <div class="form-radio__title">Пол</div>
+
+                <input class="form-radio__input" id="radio-1__male" type="radio" name="gender" value="male">
+                <label for="radio-1__male">Мужчина</label>
+            </div>
+             
+            <div class="form_radio">
+                <input class="form-radio__input" id="radio-2__female" type="radio" name="gender" value="female">
+                <label for="radio-2__female">Женщина</label>
+            </div>
+
+            <!--Comment-->
+                <div class="form-comment">
+                    <label class="form-comment__about-me" for="comment">О себе</label>
+                    <textarea class="form-comment__text" name="comment" id="comment" placeholder="Раскажите о себе..." cols="30" rows="10"></textarea>
+                </div>
+
+            <!--Checkbox-->
+                <div class="form-checkbox">
+                    <input class="form-input__checkbox" type="checkbox" name="checkbox" id="checkbox">
+                    <label for="checkbox">
+                        <div class="form-label__text">Я согласен получать обновления на почту</div>
+                    </label>
+                </div> 
+
+            <!--Btn-->
+                <div class="form-button">
+                    <button class="form-button__submit" type="submit">Регистрация</button>
+                </div>
+                
+            </form>
+        </div> <!--box-->
+    </div> <!--Container-->
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
