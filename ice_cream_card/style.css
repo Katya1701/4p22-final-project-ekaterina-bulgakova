@@ -1281,3 +1281,14 @@ label {
         margin-bottom: 15%;
     }
 }
+
+@media (max-width: 457px) {
+    .header-authorization {
+        display: none;
+    }
+
+    .burger {
+        margin-left: auto;
+        width: 60px;
+    }
+}
