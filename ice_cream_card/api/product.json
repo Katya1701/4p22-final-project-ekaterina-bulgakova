@@ -6,7 +6,8 @@
         "price": 310,
         "article": 111,
         "available": true,
-        "description": "Сливочное мороженое с малиновым джемом"
+        "description": "Сливочное мороженое с малиновым джемом",
+        "category": "1"
       },
       {
         "image": "2.svg",
@@ -14,7 +15,8 @@
         "price": 340,
         "article": 112,
         "available": true,
-        "description": "Фисташковый пломбир с кусочками шоколада"
+        "description": "Фисташковый пломбир с кусочками шоколада",
+        "category": "2"
       },
       {
         "image": "3.svg",
@@ -22,7 +24,8 @@
         "price": 330,
         "article": 113,
         "available": true,
-        "description": "Крем-брюле с черничным джемом"
+        "description": "Крем-брюле с черничным джемом",
+        "category": "1"
       },
       {
         "image": "4.svg",
@@ -30,7 +33,8 @@
         "price": 320,
         "article": 114,
         "available": true,
-        "description": "Ванильный пломбир со сладкой посыпкой"
+        "description": "Ванильный пломбир со сладкой посыпкой",
+        "category": "3"
       },
       {
         "image": "5.svg",
@@ -38,7 +42,8 @@
         "price": 330,
         "article": 115,
         "available": true,
-        "description": "Сливочное мороженое с ежевичным джемом"
+        "description": "Сливочное мороженое с ежевичным джемом",
+        "category": "1"
       },
       {
         "image": "6.svg",
@@ -46,7 +51,8 @@
         "price": 340,
         "article": 116,
         "available": true,
-        "description": "Сливочный пломбир с банановым вкусом"
+        "description": "Сливочный пломбир с банановым вкусом",
+        "category": "3"
       },
       {
         "image": "7.svg",
@@ -54,7 +60,8 @@
         "price": 270,
         "article": 117,
         "available": true,
-        "description": "Классический шоколадный пломбир"
+        "description": "Классический шоколадный пломбир",
+        "category": "3"
       },
       {
         "image": "8.svg",
@@ -62,7 +69,8 @@
         "price": 300,
         "article": 118,
         "available": true,
-        "description": "Сливочный пломбир с клубничным вкусом"
+        "description": "Сливочный пломбир с клубничным вкусом",
+        "category": "1"
       },
       {
         "image": "9.svg",
@@ -70,7 +78,8 @@
         "price": 310,
         "article": 119,
         "available": true,
-        "description": "Освежающий лимонный сорбет"
+        "description": "Освежающий лимонный сорбет",
+        "category": "4"
       },
       {
         "image": "10.svg",
@@ -78,7 +87,8 @@
         "price": 320,
         "article": 121,
         "available": true,
-        "description": "Сливочный пломбир с ментоловым сиропом"
+        "description": "Сливочный пломбир с ментоловым сиропом",
+        "category": "3"
       },
       {
         "image": "11.svg",
@@ -86,7 +96,8 @@
         "price": 360,
         "article": 122,
         "available": true,
-        "description": "Фисташковый пломбир с шоколадным сиропом"
+        "description": "Фисташковый пломбир с шоколадным сиропом",
+        "category": "2"
       },
       {
         "image": "12.svg",
@@ -94,7 +105,8 @@
         "price": 280,
         "article": 123,
         "available": true,
-        "description": "Классическое крем-брюле"
+        "description": "Классическое крем-брюле",
+        "category": "3"
       }
     ]
   }

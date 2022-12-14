@@ -4,6 +4,15 @@ const url = 'api/product.json';
 // body
 const body = document.querySelector('body');
 
+// кнопка поиска
+const searchLink = document.querySelector('.header-authorization__search-link');
+
+// всплывающий блок с поиском
+const searchBlock = document.querySelector('.header-search-block');
+
+// поле ввода поиска
+const searchInput = document.querySelector('.header-search-input');
+
 // мороженки для главной
 const mainIce_cream = [
     {
@@ -174,7 +183,7 @@ function renderCards(products) {
     let cards = '';
 
     // проверяем на какой странице находимся главная/каталог
-    if (container.dataset.role === 'main') {
+    if (body.dataset.role === 'main') {
         // если главная, создаем счетчик, т.к. на главной только 4 позиции
         let counter = 0;
         for (product in products) {
@@ -184,7 +193,7 @@ function renderCards(products) {
                 break;
             }
         }
-    } else if (container.dataset.role === 'submissive') {
+    } else if (body.dataset.role === 'submissive') {
         for (product in products) {
             cards += templateCard(products[product]);
         }
@@ -202,12 +211,19 @@ function renderCards(products) {
 
 // вызываем функцию которая получает данные из апи
 // за тем вызываем рендер карточек и передаем туда полученный объект товаров
-const products = fetchProducts(url)
-    .then(res => {obj = res})
-    .then(() => { renderCards(obj.products) });
+function productsRenderStart() {
+    const products = fetchProducts(url)
+        .then(res => {obj = res})
+        .then(() => { renderCards(obj.products) });
+}
+
+// стартуем весь процесс получения и вывода товаров
+productsRenderStart();
 
 // рендер дефолтного отображения мороженок
-renderIceCream(mainIce_cream);
+if (body.dataset.role === 'main') {
+    renderIceCream(mainIce_cream);
+}
 
 
 // помогает при формировании мороженок после переключения
@@ -241,4 +257,79 @@ function renderHelper(event, iceCreamFlag) {
                 break;
         }
     }
+}
+
+// если страница не главная
+if (body.dataset.role !== 'main') {
+    // выбор категории
+    const select = document.querySelector('.filter-block__select');
+
+    // обрабатываем событие выбора категории
+    select.addEventListener('change', () => {
+        // если выбрана категория, то ренрдерим товары с этой категорией
+        if (select.value !== "") {
+            const products = fetchProducts(url)
+                .then(res => {obj = res})
+                .then(() => {
+                    // фильтруем по категории которую получаем в селекте
+                    let filterObj = obj.products.filter((item) => item.category === select.value);
+                    // отрисовываем то что получили
+                    renderCards(filterObj);
+                });
+        // если выбрана пустая категория рендерим все товары
+        } else {
+            productsRenderStart();
+        }
+    })
+
+
+    /* Search block */
+    // по клику на кнопку поиска всплывает сам поиск
+    searchLink.addEventListener('click', () => {
+        // если он был скрыт то показывается если открыт то скрывается
+        searchBlock.classList.toggle('hide');
+        // проверяем скрыт ли поиск
+        if (searchBlock.classList.contains('hide')) {
+            // если да, то очищаем поле
+            searchInput.value = '';
+            // и запускаем перерендер всех товаров
+            productsRenderStart();
+        }
+    });
+
+    // по клику в любое место документа
+    document.addEventListener('click', (event) => {
+        // проверяем что клик не в блоке поиска и не является кнопкой поиска
+        if (!searchBlock.contains(event.target)
+            && event.target !== searchLink)
+        {
+                // тогда прячем блок поиска
+                searchBlock.classList.add('hide');
+                // очищаем поле ввода
+                searchInput.value = '';
+                // и запускаем перерендер всех товаров
+                productsRenderStart();
+        }
+    });
+
+    // при вводе в поле поиска
+    searchInput.addEventListener('input', (event) => {
+        // смотрим что символов больше 3, чтоб не рендерить товары лишний раз
+        if (event.target.value.length >= 3) {
+            // получаем товары из апи
+            const products = fetchProducts(url)
+                .then(res => {obj = res})
+                .then(() => {
+                    // фильтруем по описанию, сравниваем с тем что ввели
+                    let filterObj = 
+                        obj.products.filter((item) => item.description.includes(searchInput.value))
+                    // отрисовываем то что получили
+                    renderCards(filterObj);
+                });
+        // если поле было очищено
+        } else if (event.target.value.length === 0) {
+            // запускаем перерендер всех товаров
+            productsRenderStart();
+        }
+    })
 }

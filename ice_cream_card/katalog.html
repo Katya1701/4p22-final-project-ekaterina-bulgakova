@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="pink" data-role="submissive">
 
     <header class="header">
         <div class="header-inner">
@@ -20,9 +20,17 @@
                 <a class="header-nav__link" href="#">О компании</a>
             </nav>
 
+            <!--Search-->
             <div class="header-authorization">
                 <div class="header-authorization__phone">+7 800 555-86-28</div>
-                <button class="header-authorization__search"></button>
+
+                <button class="header-authorization__search">
+                    <a class="header-authorization__search-link" href="#"></a>
+                </button>
+                <div class="header-search-block hide">
+                        <input class="header-search-input" type="text" name="search-phrase" id="search-phrase" placeholder="Поиск по сайту">
+                </div>
+
                 <a class="header-authorization__entrance" href="auth/index_entrance.html"></a>
                 <button class="header-authorization__basketButton"></button>
             </div> 
@@ -45,10 +53,11 @@
                 <div class="filter-title">Сортировка:</div>
                 <div class="filter-block">
                     <select class="filter-block__select">
-                        <option selected>по популярности</option>
-                        <option>сначала недорогие</option>
-                        <option>сначала дорогие</option>
-                        <option>по жирности</option>
+                        <option value="" selected>Выбрать категорию:</option>
+                        <option value="1">Ягодное</option>
+                        <option value="2">Ореховое</option>
+                        <option value="3">Сливочное</option>
+                        <option value="4">Цитрусовое</option>
                     </select>
                 </div>
             </div>
@@ -120,7 +129,7 @@
         </form>
     </div>
     
-    <div class="card-container" data-role="submissive">
+    <div class="card-container">
 
         Loading...
 
